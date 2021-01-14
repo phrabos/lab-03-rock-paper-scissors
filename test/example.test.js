@@ -1,4 +1,5 @@
 // IMPORT MODULES under test here:
+import { didUserWin } from '../get-random-throw.js';
 import { makeRockPaperScissors } from '../utils.js';
 // import { didUserWin } from '../get-random-throw.js';
 
@@ -43,4 +44,68 @@ test('if two is entered as arguement then scissors will result', (expect) => {
     // Make assertions about what is expected versus the actual result
     expect.equal(actual, expected);
 });
+test('rock and rock are passed as arguements tie will result', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = 'tie';
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = didUserWin("rock","rock");
 
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+test('rock and scissors are passed as arguements win will result', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = 'win';
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = didUserWin("rock","scissors");
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+test('rock and paper are passed as arguements lose will result', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = 'lose';
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = didUserWin("rock","paper");
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+test('paper and rock are passed as arguements win will result', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = 'win';
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = didUserWin("paper","rock");
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+test('rock and paper are passed as arguements lose will result', (expect) => {
+    //Arrange
+    // Set up your arguments and expectations
+    const expected = 'lose';
+    
+    //Act 
+    // Call the function you're testing and set the result to a const
+    const actual = didUserWin("rock","paper");
+
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
