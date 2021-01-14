@@ -19,17 +19,14 @@ export function didUserWin (player, computer){
         tie()
         computerPickSpan.textContent = computer
         userPickSpan.textContent = player
-        return 'tie'
     } else if(player === "rock" && computer === 'scissors'){
         win()
         userPickSpan.textContent = player
         computerPickSpan.textContent = computer
-        return 'win'
     } else if(player === "rock" && computer === "paper"){
         loss()
         userPickSpan.textContent = player
         computerPickSpan.textContent = computer
-        return 'lose'
     } else if(player === "paper" && computer === 'rock'){
         win()
         userPickSpan.textContent = player
