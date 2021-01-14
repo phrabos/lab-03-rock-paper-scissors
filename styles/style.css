@@ -117,3 +117,9 @@ footer {
     }
 
   }
+  input {
+      display: none;
+  }
+  input:checked + img {
+      border: solid 8px rgb(147, 224, 173);
+  }
