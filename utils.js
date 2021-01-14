@@ -1,4 +1,4 @@
-export default function makeRockPaperScissors(zeroOrOneorTwo){
+export function makeRockPaperScissors(zeroOrOneorTwo){
     if (zeroOrOneorTwo === 0) {
         return 'rock'
     } else if(zeroOrOneorTwo === 1){
