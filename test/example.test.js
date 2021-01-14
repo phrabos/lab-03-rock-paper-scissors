@@ -1,6 +1,6 @@
 // IMPORT MODULES under test here:
 import { makeRockPaperScissors } from '../utils.js';
-import { didUserWin } from '../get-random-throw.js';
+// import { didUserWin } from '../get-random-throw.js';
 
 const test = QUnit.test;
 
