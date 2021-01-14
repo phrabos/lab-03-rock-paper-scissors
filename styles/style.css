@@ -84,8 +84,9 @@ content {
     width: 80%;
 }
 
-p {
-    margin: var(--gutter);
+p, div{
+    margin: 0px;
+    font-size: 25px;
 }
   
 footer {
@@ -122,4 +123,13 @@ footer {
   }
   input:checked + img {
       border: solid 8px rgb(147, 224, 173);
+  }
+  .hidden {
+      visibility: hidden;
+  }
+  button {
+      width: 100px;
+      height: 35px;
+      margin: 2px;
+      font-size: 20px;
   }

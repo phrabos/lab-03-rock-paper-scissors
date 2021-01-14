@@ -9,6 +9,7 @@ const numResets = document.getElementById("num-resets")
 const winSpan = document.getElementById("win-span")
 const lossSpan = document.getElementById("loss-span")
 const tieSpan = document.getElementById("tie-span")
+const resultsDiv = document.getElementById("results-div");
 // initialize state
 let wins = 0;
 let losses = 0;
@@ -18,6 +19,7 @@ let resets = 0;
 submitButton.addEventListener("click", () =>{
     const userPick = document.querySelector("input[type=radio]:checked").value;
     const computerPick = randomComputerPick();
+    resultsDiv.classList.remove("hidden")
 
     if (didUserWin(userPick, computerPick) === 'win'){win()}
     else if (didUserWin(userPick, computerPick) === 'lose'){loss()}
@@ -55,6 +57,7 @@ function resetGame() {
     winSpan.textContent = wins;
     tieSpan.textContent = ties;
     lossSpan.textContent = losses;
+    resultsDiv.classList.add("hidden");
 }
 
     
