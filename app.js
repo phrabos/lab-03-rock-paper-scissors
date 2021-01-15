@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import {  didUserWin, randomComputerPick  }  from "./get-random-throw.js";
+import { didUserWin, randomComputerPick } from "./get-random-throw.js";
 const submitButton = document.getElementById("submit-button")
 const resetButton = document.getElementById("reset-button")
 const userPickSpan = document.getElementById("user-pick")
@@ -16,34 +16,36 @@ let losses = 0;
 let ties = 0;
 let resets = 0;
 // set event listeners to update state and DOM
-submitButton.addEventListener("click", () =>{
+submitButton.addEventListener("click", () => {
     const userPick = document.querySelector("input[type=radio]:checked").value;
     const computerPick = randomComputerPick();
-    resultsDiv.classList.remove("hidden")
+    resultsDiv.classList.remove("hidden");
 
-    if (didUserWin(userPick, computerPick) === 'win'){win()}
-    else if (didUserWin(userPick, computerPick) === 'lose'){loss()}
+    if (didUserWin(userPick, computerPick) === 'win') win();
+    else if (didUserWin(userPick, computerPick) === 'lose') loss();
     else tie();
 
     computerPickSpan.textContent = computerPick;
     userPickSpan.textContent = userPick
 });
 
-resetButton.addEventListener("click", () =>{
+
+
+resetButton.addEventListener("click", () => {
     resetGame();
 })
 
-function tie(){
+function tie() {
     ties++
     winLoseSpan.textContent = 'tie'
     tieSpan.textContent = ties;
 }
-function win(){
+function win() {
     wins++
     winLoseSpan.textContent = 'win'
     winSpan.textContent = wins;
 }
-function loss(){
+function loss() {
     losses++
     winLoseSpan.textContent = 'lose'
     lossSpan.textContent = losses
@@ -60,6 +62,6 @@ function resetGame() {
     resultsDiv.classList.add("hidden");
 }
 
-    
+
 
 
